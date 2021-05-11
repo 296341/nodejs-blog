@@ -1,4 +1,5 @@
 const Post = require('../models/postModel');
+const user = require('../controllers/userController');
 
 const spaceXApiProvider = require('../providers/spaceXApiProvider');
 
@@ -34,7 +35,7 @@ exports.createAPost = (req, res) => {
             // newPost.content = response.description;
             newPost.content = response.details;
         }
-
+   
         newPost.save((error, post) => {
             if (error) {
                 res.status(500);
@@ -47,7 +48,6 @@ exports.createAPost = (req, res) => {
                 res.json(post);
             }
         });
-
 
         
     });
