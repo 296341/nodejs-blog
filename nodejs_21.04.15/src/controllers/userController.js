@@ -50,7 +50,8 @@ exports.userLogin = async (req, res) => {
                     jwt.sign({
                         user : {
                             id: user._id,
-                            email: user.email
+                            email: user.email,
+                            role: user.role
                         }
                     }, process.env.JWT_KEY, {
                         expiresIn: "30 days"

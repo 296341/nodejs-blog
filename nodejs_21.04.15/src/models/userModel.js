@@ -10,6 +10,11 @@ let userSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    role: {
+        type: String,
+        enum: ['admin', 'restricted'],
+        required: "le role est requis"
     }
 });
 
