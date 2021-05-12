@@ -8,7 +8,7 @@ const cors = require('cors');
 const server = express();
 
 server.use(cors({
-    credentials: true,
+   credentials: true,
     origin: 'http://localhost'
 }));
 

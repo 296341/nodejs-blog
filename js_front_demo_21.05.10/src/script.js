@@ -1,3 +1,4 @@
+
 if (localStorage.getItem("token") !== null) {
     var postDiv = document.getElementById('posts');
 
@@ -25,7 +26,7 @@ if (localStorage.getItem("token") !== null) {
         }
     });
 
-    xhr.open("GET", "http://localhost:3000/posts");
+    xhr.open("POST", "http://localhost:3000/posts");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.setRequestHeader("Authorization", localStorage.getItem('token'));
 
@@ -40,3 +41,5 @@ if (localStorage.getItem("token") !== null) {
         el.classList.remove('d-none');
     });
 }
+
+
